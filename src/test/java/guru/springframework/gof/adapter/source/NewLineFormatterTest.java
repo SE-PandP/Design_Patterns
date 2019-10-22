@@ -13,12 +13,13 @@ public class NewLineFormatterTest {
     public void testFormatText() throws Exception {
 
             String testString=" Formatting line 1. Formatting line 2. Formatting line 3.";
-            TextFormattable newLineFormatter=new NewLineFormatter();
+            TextFormattable newLineFormatter=new NewLineFormatter(); /* Existing interface */
+            /* The NewLineFormatter format the text by replacing periods with newline character*/
             String resultString = newLineFormatter.formatText(testString);
             System.out.println(resultString);
-
-            CsvFormattable csvFormatter=new CsvFormatter();
-            TextFormattable csvAdapter=new CsvAdapterImpl(csvFormatter);
+            /* As per the new requirement, we need to provide additional formating to support CSV */
+            CsvFormattable csvFormatter=new CsvFormatter(); /* This is the new incompatible interface that needs adapting*/
+            TextFormattable csvAdapter=new CsvAdapterImpl(csvFormatter); /* To adapt the CsvFormatter to the NewLineFormatter */
             String resultCsvString=csvAdapter.formatText(testString);
             System.out.println(resultCsvString);
     }

@@ -10,12 +10,14 @@ public class ConstructionEngineerTest {
 
     @Test
     public void testConstructHouse() throws Exception {
-        HouseBuilder concreteHouseBuilder = new ConcreteHouseBuilder();
+        HouseBuilder concreteHouseBuilder = new ConcreteHouseBuilder(); /* HouseBuilder is an interface to build the parts of a product */
         ConstructionEngineer engineerA = new ConstructionEngineer(concreteHouseBuilder);
-        House houseA = engineerA.constructHouse();
+        House houseA = engineerA.constructHouse(); /* A class that represents the product to create */
         System.out.println("House is: "+houseA);
-        PrefabricatedHouseBuilder prefabricatedHouseBuilder = new PrefabricatedHouseBuilder();
-        ConstructionEngineer engineerB = new ConstructionEngineer(prefabricatedHouseBuilder);
+        PrefabricatedHouseBuilder prefabricatedHouseBuilder = new PrefabricatedHouseBuilder(); 
+        /* PrefabricatedHouseBuilder and ConcreteHouseBuilder are the concrete classes that implement Builder to construct and assemble parts of the product and return the finished product */
+        
+        ConstructionEngineer engineerB = new ConstructionEngineer(prefabricatedHouseBuilder); /* A class that directs a builder to perform the steps in the order that is required to build the product */
         House houseB = engineerB.constructHouse();
         System.out.println("House is: "+houseB);
     }

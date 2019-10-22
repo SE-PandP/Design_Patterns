@@ -9,8 +9,8 @@ public class OrderFulfillmentControllerTest {
 
     @Test
     public void testOrderProduct() throws Exception {
-        OrderFulfillmentController controller=new OrderFulfillmentController();
-        controller.facade=new OrderServiceFacadeImpl();
+        OrderFulfillmentController controller=new OrderFulfillmentController(); /* Controller  */
+        controller.facade=new OrderServiceFacadeImpl(); /* Controller invoking subsystem through facade */
         controller.orderProduct(9);
         boolean result=controller.orderFulfilled;
         assertTrue(result);

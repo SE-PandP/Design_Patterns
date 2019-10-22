@@ -12,6 +12,10 @@ public class CandyVendingMachineTest {
     public void testCandyVendingMachine() throws Exception {
        System.out.println("-----Test 1: Testing machine by inserting coin and pressing button-----");
         CandyVendingMachine machine=new CandyVendingMachine(3);
+        /* Context "CandyVendingMachine" provides and interface to client to perform some action and delegates state specific requests to the ConcreteState subclass that defines the current state.*/
+        /* Context uses a state interface "CandyVendingMachineState"  that encapsulates the behavior associated with a particular state of the Context */
+        /* NoCoinState, ContainsCoinState, DispensedState, and NoCandyState are the ConcreteState subclasses that implements a behavior associated with a state of the Context */
+        
         System.out.println(machine);
         machine.insertCoin();
         System.out.println(machine);

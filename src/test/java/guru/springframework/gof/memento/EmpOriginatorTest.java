@@ -10,9 +10,14 @@ public class EmpOriginatorTest {
     @Test
     public void testMemento() throws Exception {
         EmpOriginator empOriginator= new EmpOriginator(306,"Mark Ferguson", "131011789610","Sales Manager");
+        
+        /* EmpOriginator is a Originator class whose object state is needs to be saved. It creates a Memento */
 
         EmpMemento empMemento=empOriginator.saveToMemento();
-        EmpCaretaker empCaretaker=new EmpCaretaker();
+        
+        /* EmpMemento is a class whose objects stores states of the Originator. Memento denies other objects access to itself except the Originator */
+       
+        EmpCaretaker empCaretaker=new EmpCaretaker(); /* Caretaker to manages and safeguards Memento */
         empCaretaker.addMemento(empMemento);
         System.out.println("\n Original EmpOriginator");
         empOriginator.printInfo();

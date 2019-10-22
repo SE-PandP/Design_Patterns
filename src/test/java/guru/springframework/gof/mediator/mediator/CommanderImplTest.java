@@ -12,9 +12,12 @@ public class CommanderImplTest {
 
     @Test
     public void testMediator() throws Exception {
-        Commander commander= new CommanderImpl();
-        ArmedUnit soldierUnit=new SoldierUnit(commander);
-        ArmedUnit tankUnit=new TankUnit(commander);
+        Commander commander= new CommanderImpl(); 
+        /* commander is a mediator interface that declares methods for communicating with Colleague objects */
+        /* CommanderImpl is the concrete mediator that maintains and coordinates Colleague objects */
+        ArmedUnit soldierUnit=new SoldierUnit(commander); /* Colleague*/
+        ArmedUnit tankUnit=new TankUnit(commander); /* Another Colleague*/
+        /* Below is the logic for communication between Colleague using mediator */
         commander.registerArmedUnits(soldierUnit, tankUnit);
         commander.startAttack(soldierUnit);
         commander.startAttack(tankUnit);
