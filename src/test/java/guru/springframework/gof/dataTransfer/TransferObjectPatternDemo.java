@@ -16,8 +16,8 @@ public class TransferObjectPatternDemo {
 		  We can send related information together in a single POJO class. 
 		  Note that DTO will not have any business logic in it. */
 	        List < CustomerDto > customers = new ArrayList < > ();
-	        CustomerDto customerOne = new CustomerDto("1", "Kelly", "Brown");
-	        CustomerDto customerTwo = new CustomerDto("2", "Alfonso", "Bass");
+	        CustomerDto customerOne = new CustomerDto("1", "Mu", "Sochua");
+	        CustomerDto customerTwo = new CustomerDto("2", "Fahmi", "Reza");
 	        customers.add(customerOne);
 	        customers.add(customerTwo);
 	        
@@ -41,7 +41,7 @@ public class TransferObjectPatternDemo {
 	        System.out.println("----------------------------------------------------------");
 
 	        System.out.println("Adding customer three");
-	        CustomerDto customerThree = new CustomerDto("3", "Lynda", "Blair");
+	        CustomerDto customerThree = new CustomerDto("3", "David", "Mathis");
 	        customerResource.save(customerThree);
 	        allCustomers = customerResource.getAllCustomers();
 	        printCustomerDetails(allCustomers);
