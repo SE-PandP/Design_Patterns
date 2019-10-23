@@ -1,7 +1,7 @@
 # Gang of Four Design Patterns
 ## Instructions for Eclipse
 * Goto 'File' -> 'Import' -> 'General' -> 'Projects from Folder or Archive'.
-* Select 'gof' folder from project explorer window located in your system.
+* Select the root folder of the repository located in your system from project explorer window. 
 * Click on 'Project' Tab -> 'Build Project'.
 * On build completion, go to 'Project Explorer'
     * Go to the directory 'gof' -> 'src' -> 'test' -> 'java' -> 'guru' -> 'springframework' -> 'gof'
